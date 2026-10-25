@@ -1,0 +1,101 @@
+/* Reset de estilos básicos */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Contenedor principal */
+.Contenedor {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333333;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Formulario / Input y Botón */
+#nueva-tarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+    margin-bottom: 12px;
+}
+
+#nueva-tarea:focus {
+    border-color: #4a90e2;
+}
+
+#agregar-tarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+#agregar-tarea:hover {
+    background-color: #357abd;
+}
+
+#agregar-tarea:active {
+    transform: scale(0.98);
+}
+
+/* Lista de Tareas */
+#listaTareas {
+    list-style: none;
+    margin-top: 20px;
+}
+
+#listaTareas li {
+    background-color: #f9f9f9;
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 4px solid #4a90e2;
+    word-break: break-word;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+/* Diseño responsivo para pantallas medianas y grandes */
+@media (min-width: 480px) {
+    /* Muestra el input y el botón en la misma línea en pantallas más anchas */
+    .Contenedor {
+        padding: 30px;
+    }
+    
+    #nueva-tarea {
+        margin-bottom: 15px;
+    }
+}
